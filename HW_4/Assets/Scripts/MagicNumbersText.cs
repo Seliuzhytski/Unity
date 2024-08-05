@@ -14,9 +14,9 @@ public class MagicNumbersText : MonoBehaviour
     private int _guess;
     private Restart _restart;
     private int _startMin, _startMax;
-    [SerializeField] private TextMeshProUGUI _text_1;
-    [SerializeField] private TextMeshProUGUI _text_2;
-    [SerializeField] private TextMeshProUGUI _text_3;
+    [SerializeField] private TextMeshProUGUI _textStart;
+    [SerializeField] private TextMeshProUGUI _textGame;
+    [SerializeField] private TextMeshProUGUI _textFinish;
 
     #endregion
 
@@ -49,7 +49,7 @@ public class MagicNumbersText : MonoBehaviour
         {
             _restart = StartGame;
 
-            _text_3.text = $"Ура! Твое число отгадано и равно {_guess}, количество операций {_count}";
+            _textFinish.text = $"Ура! Твое число отгадано и равно {_guess}, количество операций {_count}";
             _restart();
         }
     }
@@ -61,13 +61,13 @@ public class MagicNumbersText : MonoBehaviour
     private void CalculateGuessAndLog()
     {
         _guess = (_max + _min) / 2;
-        _text_2.text = $"Твое число равно {_guess}";
+        _textGame.text = $"Твое число равно {_guess}?";
         _count++;
     }
 
     private void StartGame()
     {
-        _text_1.text = $"Загадайте число от {_startMin} до {_startMax}";
+        _textStart.text = $"Загадайте число от {_startMin} до {_startMax}";
         _min = _startMin;
         _max = _startMax;
         _guess = 0;

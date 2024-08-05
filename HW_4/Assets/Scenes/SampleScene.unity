@@ -619,9 +619,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _max: 1000
   _min: 1
-  _text_1: {fileID: 2006084196}
-  _text_2: {fileID: 1370570126}
-  _text_3: {fileID: 164964069}
+  _textStart: {fileID: 2006084196}
+  _textGame: {fileID: 1370570126}
+  _textFinish: {fileID: 164964069}
 --- !u!4 &1001473053
 Transform:
   m_ObjectHideFlags: 0

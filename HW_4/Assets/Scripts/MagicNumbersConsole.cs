@@ -57,7 +57,7 @@ public class MagicNumbers : MonoBehaviour
     private void CalculateGuessAndLog()
     {
         _guess = (_max + _min) / 2;
-        Debug.Log($"Твое число равно {_guess}");
+        Debug.Log($"Твое число равно {_guess}?");
         _count++;
     }
 
